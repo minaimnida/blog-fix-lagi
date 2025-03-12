@@ -2,15 +2,13 @@ import React from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Blog } from "@/types/blog";
 import Image from "next/image";
-import { FC } from "react";
 import Link from "next/link";
-import myImageLoader from "../../../../my/image/loader";
 
 interface BlogCardProps {
   blog: Blog;
 }
 
-const BlogCard: FC<BlogCardProps> = ({ blog }) => {
+const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
   return (
     <Link href={`/blogs/${blog.slug}`} className="group block">
       <Card className="overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
@@ -18,9 +16,8 @@ const BlogCard: FC<BlogCardProps> = ({ blog }) => {
         <CardHeader className="p-0 relative">
           <div className="relative w-full h-[220px] overflow-hidden">
             <Image
-              loader={myImageLoader}
-              src={blog.thumbnail}
-              alt="Blog Thumbnail"
+              src={blog.thumbnail || "/default-thumbnail.jpg"}
+              alt={blog.title}
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const BlogHome = () => {
   return (
-    <div className="bg-gray-100 text-gray-900 min-h-screen">
+    <div className="container mx-auto bg-gray-100 text-gray-900 min-h-screen">
       {/* Main Featured Article */}
       <section className="relative h-[60vh] flex items-center justify-center text-black text-center">
         {/* Background Image */}
@@ -10,9 +10,9 @@ const BlogHome = () => {
           <Image
             src="/blogpic1.jpeg"
             alt="Blog Background"
-            layout="fill"
-            objectFit="cover"
+            fill
             priority
+            style={{ objectFit: "cover" }}
           />
         </div>
 
@@ -21,10 +21,10 @@ const BlogHome = () => {
 
         {/* Content */}
         <div className="relative px-6max-w-2xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-extrabold leading-tight">
+          <h2 className="text-4xl md:text-6xl font-extrabold leading-tight">
             Inside the Future of Eco-Living
           </h2>
-          <p className="mt-2 text-lg md:text-xl">
+          <p className="mt-2 text-lg md:text-2xl">
             Discover how sustainable living is shaping the world.
           </p>
         </div>

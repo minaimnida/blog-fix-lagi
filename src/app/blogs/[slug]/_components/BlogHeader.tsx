@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { getBlog } from "../../_api/getBlog";
+import { getBlog } from "../../../api/getBlog";
 import { format } from "date-fns";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";

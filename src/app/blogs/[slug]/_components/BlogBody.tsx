@@ -1,7 +1,7 @@
 import Markdown from '@/components/Markdown';
 import { FC } from 'react';
 import IncrementViews from './IncrementViews';
-import { getBlog } from '../../_api/getBlog';
+import { getBlog } from '../../../api/getBlog';
 import AboutUser from '@/app/about/[id]/_components/AboutUser';
 
 

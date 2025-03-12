@@ -1,5 +1,5 @@
 import { resolve } from "path";
-import { getBlogs } from "../_api/getBlogs";
+import { getBlogs } from "../../api/getBlogs";
 import Blogs from "../page";
 import BlogCard from "./BlogCard";
 
